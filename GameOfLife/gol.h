@@ -61,7 +61,8 @@ namespace GoL		//Packing all classes to Game of Life namespace.
 		//Internal methods. For resetting cell matrix and destroying it.
 		void _reset(size_t w, size_t h);	
 		void _destroy();
-		int GetAliveNeighborCount(size_t x, size_t y) const;	//Get count of alive neighbor cells for cell by coordinates
+		
+		int GetAliveNeighborCount(size_t x, size_t y) const;	//Get count of alive neighbor cells for cell by coordinates. Also internal method.
 		
 	public:
 
@@ -83,7 +84,7 @@ namespace GoL		//Packing all classes to Game of Life namespace.
 		void SaveToTheFile(const char* fileName);	//Save current field to the file. Works only in paused state.
 		void LoadFromFile(const char* fileName);	//Load cell matrix from file. Works only in paused state.
 
-		friend void nextgenThreadRoutine(CField* obj, CellMatrix_t newField, size_t from, size_t to);	//Multithread generation processing function must have access to CField members.
+		friend void nextgenThreadRoutine(const CField* obj, CellMatrix_t newField, size_t from, size_t to);	//Multithread generation processing function must have access to CField members.
 	};
 
 

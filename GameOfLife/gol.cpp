@@ -208,7 +208,7 @@ namespace GoL
 		return m_waitInterval;
 	}
 
-	void nextgenThreadRoutine(CField* obj, CField::CellMatrix_t newField, size_t from, size_t to)	//Thread working function.
+	void nextgenThreadRoutine(const CField* obj, CField::CellMatrix_t newField, size_t from, size_t to)	//Thread working function.
 	{
 		for (size_t i = from; i <= to; i++)
 		{
