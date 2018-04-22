@@ -18,6 +18,7 @@ namespace GoL		//Packing all classes to Game of Life namespace.
 			LEFT,
 			RIGHT
 		};
+
 	protected:
 		int m_x;	//Marker current coordinates
 		int m_y;	
