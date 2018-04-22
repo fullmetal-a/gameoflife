@@ -14,7 +14,7 @@ void routine(GoL::CField* pField, std::mutex* mt)
 		mt->lock();	
 		system("cls");
 		if(!pField->IsPaused())	//If not paused - make next generation of life.
-			pField->NextGen();
+			pField->NextGen(4); //Process next generation of life in 4 threads (Can be any value between 1 and maximum height of field)
 		pField->Print();	//Draw frame of game
 		std::cout << "WASD - Move marker. Spacebar - mark cell. Enter - Pause. R - Speed(-), T - Speed(+), Z - Save, X - Load, Q - Exit\n";	//Show tooltip
 		mt->unlock();
