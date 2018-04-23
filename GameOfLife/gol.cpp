@@ -14,7 +14,7 @@ namespace GoL
 
 	//------------------------------------------------------------------------------
 	// Class name: CMarker
-	// This is an object on field for changing lifestate of selected state.
+	// This is an object on field for changing lifestate of selected cell.
 	//------------------------------------------------------------------------------
 
 	CMarker::CMarker()
