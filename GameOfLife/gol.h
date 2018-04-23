@@ -55,7 +55,7 @@ namespace GoL		//Packing all classes to Game of Life namespace.
 		CellMatrix_t m_field;	//Field of cells
 		size_t m_width;		//Dims of field
 		size_t m_height;
-		unsigned int m_waitInterval;	//Update perion interval in milliseconds
+		unsigned int m_waitInterval;	//Update period interval in milliseconds
 		bool m_paused;		//Game state. Paused or not.
 		mutable std::mutex m_mutex;	//Synchronization object for thread-safe working. This object must be able to change it's state even in const methods.
 
@@ -67,7 +67,7 @@ namespace GoL		//Packing all classes to Game of Life namespace.
 		
 	public:
 
-		CField(size_t w, size_t h);	//There is no default constructor 
+		CField(size_t w, size_t h);	//No default constructor allowed
 		~CField();
 
 		void Print() const;		//Print entire field to console and some additional information. 
