@@ -76,7 +76,7 @@ int main()
 		case 'z':	//Save to file on Z
 		case 'Z':
 			mt.lock();	//Pause updating thread to let user enter file name.
-			gameField.Pause(true);	//Pause generation and stop printing
+			gameField.Pause(true);	//Pause generation 
 			system("cls");	//Clear screen and print data for convinience
 			gameField.Print();	
 			std::cout << "Enter name of file: ";
@@ -89,7 +89,7 @@ int main()
 		case 'x':	//Load from file on X
 		case 'X':
 			mt.lock(); //Pause updating thread to let user enter file name.
-			gameField.Pause(true); //Pause generation and stop printing
+			gameField.Pause(true); //Pause generation
 			system("cls"); //Clear screen and print data for convinience
 			gameField.Print();
 			std::cout << "Enter name of file: ";
